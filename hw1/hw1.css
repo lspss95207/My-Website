@@ -1,0 +1,35 @@
+h2{
+    margin: 0px;
+}
+
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px;
+    max-width: 40%;
+    margin: 10px;
+}
+figure figcaption{
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    text-align: center;
+}
+figure img{
+    width: 100%;
+    height: auto;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+p{
+    text-indent : 2em;
+}

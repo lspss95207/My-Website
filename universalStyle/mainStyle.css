@@ -1,0 +1,261 @@
+*{
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;;
+    color: white;
+}
+
+html, body{
+    background-color: #0D1E26;
+    margin: 0px;
+    height: 100%;
+}
+
+header, main, footer {
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    text-align: center;
+    background-color: #3CB480;
+    padding: 20px;
+    margin: 0px;
+}
+
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #446DC1;
+}
+header nav li {
+    display: flex;
+}
+
+header nav ul li a{
+    display: flex;
+    text-align: center;
+    padding: 21px 40px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+header nav li:hover {
+    background-color: #3E37A4;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.dropdown-content {
+    max-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+    margin-top: 60.5px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+
+.dropdown-content li{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+.dropdown-content li a{
+    color: grey;
+}
+
+
+.dropdown:hover .dropdown-content{
+    max-height: 1000px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+footer{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #3D9DB8;
+    padding: 10px 0px;
+    bottom: 0;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+    height: 20px;
+    width: 20px;
+    padding: 12px 10px 7px 10px;
+    margin: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-steam-square {
+    background: #1F2770;
+    color: white;
+}
+.fa-github {
+    background: black;
+    color: white;
+}
+.fa-instagram {
+    background: rgb(247, 62, 30);
+    color: white;
+}
+
+
+
+
+
+@media only screen and (max-width: 670px), (orientation: portrait) {
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 70%; */
+    }
+
+    figure{
+        min-width: 80%;
+    }
+
+    header nav ul{
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    header nav ul li{
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-content{
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        max-height: 1000px;
+    }
+
+    header nav ul li a{
+        padding: 12px 40px;
+    }
+
+}
+
+
+@media (max-width: 670px), (orientation: portrait) {
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 70%; */
+    }
+
+    figure{
+        min-width: 80%;
+    }
+
+    header nav ul{
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    header nav ul li{
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-content{
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        max-height: 1000px;
+    }
+
+    header nav ul li a{
+        padding: 12px 40px;
+    }
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../universalStyle/mainStyle.css">
+    <link rel="stylesheet" type="text/css" href="../universalStyle/style1.css">
+    <link rel="stylesheet" type="text/css" href="./hw1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Samuel's Website</title>
+  </head>
+  <body>
+    <header>
+      <h1>Samuel's Javascript Homework Website</h1>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li class="dropdown">
+            <a href="#">Homeworks</a>
+            <ul class="dropdown-content">
+              <li class="active"><a href="#">HW1</a></li>
+              <li><a href="../hw2/hw2-0710764-黃聖偉.html">HW2</a></li>
+              <li><a href="#">HW3</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">CSS Styles</a>
+            <ul class="dropdown-content"  id="style_selector">
+              <li><a href="#" id="style1">Style 1</a></li>
+              <li><a href="#" id="style2">Style 2</a></li>
+              <li><a href="#" id="style3">Style 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <figure>
+        <img src="./images/profile.jpg"
+                 alt="Profile Photo">
+        <figcaption>Profile Photo</figcaption>
+        </figure>
+            
+      <section>
+        <article id="information">
+            <h2>Information</h2>
+            <ul>
+                <li>Name: 黃聖偉(Samuel Huang)</li>
+                <li>Student ID: 0710764</li>
+                <li>Birthday: 2000/06/19</li>
+            </ul>
+        </article>
+        <article id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a href="mailto:lspss95207@gmail.com">lspss95207@gmail.com</a></li>
+                <li>Phone: +886-908-650-928</li>
+              </ul>
+        </article>
+        <article id="contact">
+          <h2>作業介紹</h2>
+          <p>
+            此網頁為作業一HW1，我將整個網站的CSS分成以下三部分:<br>
+            <ul>
+              <li>第一部分放在主目錄<a href="../universalStyle/mainStyle.css">./universalStyle/mainStyle.css</a>中，控制所有網頁(包含HW1、HW2、HW3)的主要樣式，如主標題、navigation bar、main、footer等。</li>
+              <li>第二部分放在網頁目錄<a href="./hw1.css">./hw1/hw1.css</a>中，控制此網頁main中的元素樣式，如figure、section、artical等。</li>
+              <li>第三部分放在主目錄<a href="../universalStyle/style1.css">../universalStyle/style[index].css</a>中，控制所有網頁的顏色、動畫等設計，可藉由navigation bar的CSS Style選單選擇套用何種設計。</li>
+            </ul>
+          </p>
+      </article>
+      </section>
+    </main>
+    
+    <footer>
+      <a href="https://www.facebook.com/samuel.huang.95207" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/samuel95207/?hl=zh-tw" class="fa fa-instagram"></a>
+      <a href="https://twitter.com/Samuel95207" class="fa fa-twitter"></a>
+      <a href="https://github.com/lspss95207" class="fa fa-github"></a>
+      <a href="https://steamcommunity.com/id/lspss95207/" class="fa fa-steam-square"></a>
+      <p>Email: <a href="mailto:lspss95207@gmail.com">lspss95207@gmail.com</a></p>
+      <script src="../universalJs/nav.js"></script>
+    </footer>
+              
+  </body>
+</html>

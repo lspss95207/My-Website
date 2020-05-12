@@ -27,7 +27,7 @@ Paddle.prototype.move = function () {
 
 function Ball() {
     this.radius = randInt(5, 20);
-    this.velocity = { x: randInt(-5, 5), y: randInt(-5, 5) }
+    this.velocity = { x: randInt(3, 6), y: randInt(3, 6) }
     this.node = document.createElement("div");
     this.node.className = "ball";
     this.node.style.height = 2 * this.radius + "px";
@@ -46,6 +46,11 @@ Ball.prototype.move = function () {
         this.velocity.x *= randInt(0.8, 1.2);
         this.velocity.y *= -randInt(0.8, 1.2);
     }
+    this.velocity.x = this.velocity.x < -10 ? -10 : this.velocity.x;
+    this.velocity.x = this.velocity.x > 10 ? 10 : this.velocity.x;
+    this.velocity.y = this.velocity.y < -10 ? -10 : this.velocity.y;
+    this.velocity.y = this.velocity.y > 10 ? 10 : this.velocity.y;
+
 
     this.node.style.top = Math.max(0, Math.min(height - 2 * this.radius, pos.y + this.velocity.y)) + "px";
     this.node.style.left = Math.max(0, Math.min(width - 2 * this.radius, pos.x + this.velocity.x)) + "px";
@@ -64,42 +69,30 @@ function randInt(start, end) {
 const N = 1;
 const fps = 60;
 
-var paddle = new Paddle();
-window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) {
-        return;
+window.addEventListener("load", function () {
+    var ball_arr = [];
+    for (let i = 0; i < N; i++) {
+        ball_arr[i] = new Ball();
+        gameArea.appendChild(ball_arr[i].node);
     }
 
-    switch (event.key) {
-        case "ArrowLeft":
-            paddle.velocity.x = -10;
-            break;
-        case "ArrowRight":
-            paddle.velocity.x = 10;
-            break;
-        default:
-            return;
+    var paddle_arr = [];
+    for (let i = 0; i < N; i++) {
+        paddle_arr[i] = new Paddle();
+        gameArea.appendChild(paddle_arr[i].node);
     }
-    event.preventDefault();
-}, true);
-window.addEventListener("keyup", function (event) {
-    paddle.velocity.x = 0;
-}, true);
 
-ball_arr = [];
-for (let i = 0; i < N; i++) {
-    ball_arr[i] = new Ball();
-    gameArea.appendChild(ball_arr[i].node);
-}
-gameArea.appendChild(paddle.node);
+    var id = setInterval(frame, 1000 / fps)
+    function frame() {
+        ball_arr.forEach(ball => {
+            ball.move();
+        });
+    }
+    // setTimeout(()=>clearInterval(id),10000);
 
-var id = setInterval(frame, 1000 / fps)
-function frame() {
-    ball_arr.forEach(ball => {
-        ball.move();
+    gameArea.addEventListener("mousemove", function (e) {
+        for (let i = 0; i < N; i++) {
+            paddle_arr[i].node.style.left = Math.max(0,Math.min(width-paddle_arr[i].width,e.offsetX))+"px"
+        }
     });
-    paddle.move();
-}
-
-
-// setTimeout(()=>clearInterval(id),10000);
+});

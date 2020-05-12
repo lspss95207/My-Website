@@ -1,6 +1,4 @@
-#container {
-    width: 800px;
-    height: 600px;
+#gameArea {
     margin: auto;
     position: relative;
     background-color: black;

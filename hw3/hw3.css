@@ -25,3 +25,41 @@
     left: 0px;
     background-color: red;
 }
+
+#score {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#title{
+    font-weight: bolder;
+    font-size: xxx-large;
+    margin: 5px;
+}
+
+#info{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+#startButton{
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    border-color: white;
+}

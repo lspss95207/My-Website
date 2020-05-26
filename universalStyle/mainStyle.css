@@ -106,6 +106,24 @@ main{
     padding: 20px;
 }
 
+figure {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+figure img{
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
 footer{
     display: flex;
     flex-shrink: 0;

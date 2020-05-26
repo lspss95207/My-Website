@@ -1,0 +1,55 @@
+#photoviewer{
+    position: relative;
+    margin: auto;
+    margin-top: 0;
+}
+
+
+#photoviewer:hover #previous,#photoviewer:hover #next {
+    padding: 0 30px;
+    opacity: 0.3;
+    transition: 2s;
+}
+
+
+
+#previous,#next{
+    position: absolute;
+    width: 0.5em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 4em;
+    background-color: black;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    transition: 2s;
+}
+
+#previous a,#next a{
+    color: white;
+    position: relative;
+    top: 40%;
+    text-decoration: none;
+}
+
+#previous{
+    left: 0;
+}
+#next{
+    right: 0;
+}
+
+
+section{
+    align-content: center;
+}
+
+figure {
+    width: 45%;
+}
+
+h2{
+    text-align: center;
+}
+
